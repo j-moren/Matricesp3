@@ -31,6 +31,18 @@ public class Metodos {
             }
         }
     }
-
-    
+    public void calcularSumas (int[][] matriz, int[] filaSuma, int[] columnaSuma) {
+        
+        for (int i = 0; i < matriz.length; i++) {
+            filaSuma[i] = 0;
+            columnaSuma[i] = 0; // Inicializamos los Vecores de suma a 0
+            
+        }
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; i < matriz[i].length; j++) {
+                filaSuma[i] += matriz[i][j]; // Calculamos las Sumas de las filas y las Columnas
+                columnaSuma[j] += matriz[i][j];
+            }
+        }        
+    }
 }
